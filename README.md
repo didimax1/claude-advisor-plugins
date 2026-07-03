@@ -26,6 +26,10 @@ claude plugin install fable-advisor@claude-advisor-plugins
 
 Then restart Claude Code (or `/clear`) so the SessionStart hook loads.
 
+**Access:** this is a **private** repo — you must be a member of the `didimax1`
+org with read access and have GitHub auth set up (`gh auth login`, or git HTTPS
+credentials) so the marketplace clone succeeds.
+
 ## Enable / disable
 
 - **Whole feature (skill + hook) —** the primary switch: `/plugin` → toggle
@@ -35,6 +39,17 @@ Then restart Claude Code (or `/clear`) so the SessionStart hook loads.
   this: when the skill is disabled (or set to name-only / user-invocable-only) the
   reminder stops injecting, so you never get a reminder pointing at a disabled
   skill. (An already-open session keeps the reminder until its next start/clear.)
+
+## Updating
+
+When a new version is published to the marketplace:
+
+```bash
+claude plugin marketplace update claude-advisor-plugins
+claude plugin update fable-advisor@claude-advisor-plugins
+```
+
+Restart Claude Code to apply.
 
 ## What it costs
 
@@ -57,3 +72,10 @@ plugins/fable-advisor/
   hooks/hooks.json                     # SessionStart registration
   hooks/session-start.py               # self-gating reminder injector
 ```
+
+## Notes
+
+- If you also run the **superpowers** plugin, its `brainstorming` trigger is very
+  aggressive and may take the "before substantive work" slot on build/design
+  tasks before fable-advisor does. fable-advisor still fires on complex/high-stakes
+  decisions, when stuck, and before declaring done.
