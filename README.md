@@ -26,9 +26,8 @@ claude plugin install fable-advisor@claude-advisor-plugins
 
 Then restart Claude Code (or `/clear`) so the SessionStart hook loads.
 
-**Access:** this is a **private** repo — you must be a member of the `didimax1`
-org with read access and have GitHub auth set up (`gh auth login`, or git HTTPS
-credentials) so the marketplace clone succeeds.
+**Access:** this is a **public** repo — anyone can install it; no org membership
+or GitHub authentication required.
 
 ## Enable / disable
 
