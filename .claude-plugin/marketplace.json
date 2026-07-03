@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-advisor-plugins",
+  "description": "Independent second-opinion reviewer plugins that replace the built-in advisor tool, one per reviewer model.",
+  "owner": {
+    "name": "didimax1"
+  },
+  "plugins": [
+    {
+      "name": "fable-advisor",
+      "description": "Independent second-opinion reviewer on the fable model, invoked at advisor checkpoints (before substantive work, before declaring done, when stuck, when changing approach).",
+      "source": "./plugins/fable-advisor",
+      "category": "development"
+    }
+  ]
+}
