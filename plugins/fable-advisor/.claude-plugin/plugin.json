@@ -1,7 +1,7 @@
 {
   "name": "fable-advisor",
-  "description": "Independent second-opinion reviewer on the fable model. A SessionStart hook injects advisor-style trigger instructions so the top-level agent invokes the fable-advisor skill at the right checkpoints; the skill spawns a fable agent that reads the full conversation and returns a course-correction. Replaces the built-in advisor tool when it is disabled or unavailable.",
-  "version": "0.1.0",
+  "description": "Independent second-opinion reviewer on the fable model. A SessionStart hook injects advisor-style trigger instructions so the top-level agent invokes the fable-advisor skill at the right checkpoints; the skill spawns a fable agent that reads the full conversation and returns a course-correction. Replaces the built-in advisor tool when it is disabled or unavailable. Stays silent when the session itself already runs a fable model.",
+  "version": "0.2.0",
   "author": {
     "name": "didimax1"
   },

@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "fable-advisor",
-      "description": "Independent second-opinion reviewer on the fable model, invoked at advisor checkpoints (before substantive work, before declaring done, when stuck, when changing approach).",
+      "description": "Independent second-opinion reviewer on the fable model, invoked at advisor checkpoints (before substantive work, before declaring done, when stuck, when changing approach). Stays silent on sessions that already run a fable model (manual /fable-advisor still works).",
       "source": "./plugins/fable-advisor",
       "category": "development"
     }

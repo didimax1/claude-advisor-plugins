@@ -117,7 +117,7 @@ reviewer read the file itself, so your own context stays lean.
 
 ```
 You are a senior technical advisor giving an independent second opinion. A working
-agent — running a DIFFERENT model — is mid-task and has paused to hear from you
+agent — typically running a different model — is mid-task and has paused to hear from you
 BEFORE it commits to an approach or declares the task done. Your job is to catch
 what it cannot see from the inside.
 
@@ -202,6 +202,11 @@ fable is used regardless of the session model. If the session runs a more capabl
 model, treat fable's output as an **independent second opinion / red-team**, not an
 escalation to a stronger authority — its value is the different anchoring, not raw
 capability. Do not defer to it over your own primary-source evidence.
+
+The plugin's SessionStart hook does not inject the auto-trigger when the session
+itself already runs a fable model — fable reviewing fable adds no independent
+anchoring, so the plugin stays quiet there. On such sessions this skill still
+works when invoked manually (`/fable-advisor`).
 
 ## Common mistakes
 
